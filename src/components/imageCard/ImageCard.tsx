@@ -1,30 +1,32 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../../styles.scss";
-// import "../../assets/asd.jpg";
-type ImageCardType = {
-  shuffledImages: string[];
-};
-const asd = "../../assets/asd.jpg";
-export const ImageCard = ({ shuffledImages }: ImageCardType) => {
-  const [flippedIndex, setFlippedIndex] = useState<number>();
-  const [isClicked, setIsClicked] = useState<boolean>(false);
+import { getRandomImg } from "../../gameImages";
+import lodash from "lodash.shuffle";
 
+type gameImage = { id: number; img: string; flipped: boolean };
+
+const createImageList = (images: string[]): gameImage[] => {
+  const doubledImages = lodash([...images, ...images]);
+  const imagesArray = doubledImages.map((img, id) => ({
+    id: id,
+    img: img,
+    flipped: false,
+  }));
+  return imagesArray;
+};
+export const ImageCard = () => {
+  const images = createImageList(getRandomImg());
+  const [imagesArray, setImagesArray] = useState<gameImage[]>(images);
+  const [prevImage, setPrevImage] = useState<gameImage | null>();
+
+  const flip = (image: gameImage) => {};
   return (
     <>
-      {shuffledImages.map((image, i) => {
-        return (
-          <div className="image-card" key={i}>
-            <button
-              className="image-card__button"
-              onClick={() => setFlippedIndex(i)}
-            >
-              {flippedIndex === i ? (
-                <img className="image-card__img" src={image} alt="image" />
-              ) : (
-                <img className="image-card__img" src={asd} alt="image" />
-              )}
-            </button>
-          </div>
+      {imagesArray.map(({ img, id, flipped }) => {
+        flipped ? (
+          <img key={id} src={img} alt="" />
+        ) : (
+          <button key={id} onClick={() => flip({ id, img, flipped })}></button>
         );
       })}
     </>
