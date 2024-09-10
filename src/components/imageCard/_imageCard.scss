@@ -1,9 +1,14 @@
 .image-card {
   border-radius: 8px;
 
+  &__button {
+    width: 14rem;
+    height: 12rem;
+  }
+
   &__img {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 14rem;
+    height: 12rem;
   }
 }

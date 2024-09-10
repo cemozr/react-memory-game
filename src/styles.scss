@@ -1,7 +1,10 @@
 //base
-@import "./utilities";
 @import "./variables";
+@import "./utilities";
 @import "./mixins";
 //components
 @import "./components/imageCard/imageCard";
 @import "./components/cardsSection/cardsSection";
+@import "./components/winScreen/winScreen";
+//styling for other devices
+@import "./responsive";

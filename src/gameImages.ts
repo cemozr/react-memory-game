@@ -22,6 +22,10 @@ const gameImages: string[] = [
   "https://images.unsplash.com/photo-1463852247062-1bbca38f7805?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGFuaW1hbHxlbnwwfHwwfHx8MA%3D%3D",
   "https://images.unsplash.com/photo-1470130623320-9583a8d06241?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fGFuaW1hbHxlbnwwfHwwfHx8MA%3D%3D",
   "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGFuaW1hbHxlbnwwfHwwfHx8MA%3D%3D",
+  "https://images.unsplash.com/photo-1489084917528-a57e68a79a1e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fHw%3D",
+  "https://images.unsplash.com/photo-1587213128862-80345e23a71a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NjZ8fHxlbnwwfHx8fHw%3D",
+  "https://images.unsplash.com/photo-1503301360699-4f60cf292ec8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTQ1fHx8ZW58MHx8fHx8",
 ];
 
 export const getRandomImg = (): string[] => {
